@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PetalVibes Gardening - Contact Us</title>
+<style>
+  /* CSS Variables for Dark Forest and Cherry Blossom */
+  :root {
+    --forest-dark: #142517;
+    --forest-medium: #234d20;
+    --forest-light: #3d7840;
+    --cherry-pink: #ffc4d6;
+    --cherry-pink-dark: #e892a9;
+    --text-light: #e9ecef;
+    --text-muted: #a4b494;
+    --background-dark: #0e1a0f;
+    --shadow-glass: rgba(255, 196, 214, 0.15);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0; padding:0;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-light);
+    background: var(--background-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--cherry-pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--cherry-pink-dark);
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 0.75rem;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+  }
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+  }
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--forest-light);
+  }
+  p, li {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    max-width: 900px;
+  }
+  ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  ul li {
+    margin-bottom: 0.8rem;
+  }
+  /* Container and layout */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--forest-dark);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(18,32,14,0.8);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+    letter-spacing: 0.1em;
+    cursor: default;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .nav-links > a {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  nav .nav-links > a:hover,
+  nav .nav-links > a:focus {
+    background: var(--cherry-pink);
+    color: var(--forest-dark);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, rgba(255,196,214,0.8), rgba(18,43,16,0.85)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-light);
+  }
+  .hero h1 {
+    font-size: 4rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.65);
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  /* Main content styles */
+  main.content {
+    background: var(--forest-dark);
+    padding: 3rem 1rem 6rem 1rem;
+    color: var(--text-muted);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.9;
+  }
+  main.content section {
+    margin-bottom: 3rem;
+  }
+  main.content h2 {
+    color: var(--cherry-pink);
+    margin-bottom: 1.2rem;
+  }
+  main.content h3 {
+    color: var(--forest-light);
+    margin-bottom: 0.8rem;
+  }
+
+  form.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin-top: 2rem;
+  }
+  label {
+    font-weight: 600;
+    color: var(--cherry-pink);
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 0.75rem 1rem;
+    background: var(--forest-medium);
+    border: 1px solid var(--forest-light);
+    border-radius: 0.75rem;
+    color: var(--text-light);
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: var(--cherry-pink);
+    outline: none;
+  }
+  textarea {
+    min-height: 120px;
+  }
+  button.submit-btn {
+    background: var(--cherry-pink);
+    color: var(--forest-dark);
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    align-self: flex-start;
+    box-shadow: 0 6px 15px rgba(255,196,214,0.6);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  button.submit-btn:hover,
+  button.submit-btn:focus {
+    background: var(--cherry-pink-dark);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  /* Disclaimer and info section styling */
+  .info-block {
+    max-width: 720px;
+    margin-top: 2rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--forest-dark);
+    color: var(--text-muted);
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid var(--forest-medium);
+  }
+  footer address {
+    font-style: normal;
+    margin-bottom: 0.25rem;
+  }
+  footer a {
+    color: var(--cherry-pink);
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Primary navigation">
+    <div class="logo" tabindex="0">PetalVibes</div>
+    <div class="nav-links">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Contact Us">
+  <h1>Contact PetalVibes Gardening</h1>
+  <p>We're here to help you with all your gardening dreams and questions. Reach out to us and let's cultivate beauty together.</p>
+</section>
+
+<main class="content" tabindex="0" aria-label="Contact Page Content">
+
+  <section aria-labelledby="contact-intro">
+    <h2 id="contact-intro">Get In Touch</h2>
+    <p>
+      Whether you want to schedule a consultation, ask about our services, or simply chat about your garden, we welcome your message. Our team is passionate about delivering personalized gardening solutions tailored to your unique outdoor space.
+    </p>
+    <p>
+      Use the contact form below, email us directly, or call us anytime during business hours. We strive to respond promptly and attentively.
+    </p>
+    <p>
+      Our office address and phone number are listed in the footer for your convenience.
+    </p>
+  </section>
+
+  <section aria-labelledby="contact-form-section">
+    <h2 id="contact-form-section">Contact Form</h2>
+    <form class="contact-form" action="#" method="POST" aria-label="Contact form">
+      <label for="name">Full Name <span aria-hidden="true">*</span></label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" />
+      
+      <label for="email">Email Address <span aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" />
+      
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" placeholder="+1 866 242 5454" />
+      
+      <label for="subject">Subject <span aria-hidden="true">*</span></label>
+      <input type="text" id="subject" name="subject" placeholder="Subject of your message" required aria-required="true" />
+      
+      <label for="message">Message <span aria-hidden="true">*</span></label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required aria-required="true"></textarea>
+      
+      <button type="submit" class="submit-btn" aria-label="Send message">Send Message</button>
+    </form>
+  </section>
+
+  <section aria-labelledby="contact-details" class="info-block">
+    <h2 id="contact-details">Other Ways to Reach Us</h2>
+    <p><strong>Email:</strong> <a href="mailto:info@petalvibes.com">info@petalvibes.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+18662425454">+1 (866) 242-5454</a></p>
+    <p><strong>Office Address:</strong> 19 Washington Square N, New York, NY 10011, USA</p>
+    <p>Feel free to visit us during business hours Monday through Friday, from 9:00 AM to 6:00 PM.</p>
+  </section>
+
+  <section aria-labelledby="consultation-info" class="info-block">
+    <h2 id="consultation-info">Schedule a Gardening Consultation</h2>
+    <p>
+      Our expert garden designers are happy to offer consultations tailored to your needs. To schedule a visit to your property, please use the contact form or phone.
+    </p>
+    <p>
+      During the consultation, we assess your gardening space, discuss your preferences, and offer advice on suitable plants, designs, and maintenance plans.
+    </p>
+    <p>
+      We believe in collaborative creation, making your gardening vision come to life with creativity and expertise.
+    </p>
+  </section>
+
+  <section aria-labelledby="faqs" class="info-block">
+    <h2 id="faqs">Gardening & Service FAQs</h2>
+    <h3>What areas do you service?</h3>
+    <p>We primarily serve the New York City area, including Manhattan, Brooklyn, Queens, and surrounding boroughs. Please contact us for requests outside these areas.</p>
+
+    <h3>Do you offer eco-friendly gardening options?</h3>
+    <p>Yes, sustainability is a core principle. We emphasize native planting, organic fertilizers, and water conservation practices in all projects.</p>
+
+    <h3>How long does a typical garden design consultation last?</h3>
+    <p>Consultations typically last between one to two hours depending on the scope and your questions.</p>
+
+    <h3>Can you help with seasonal garden maintenance?</h3>
+    <p>Absolutely! We offer tailored seasonal maintenance packages to keep your garden thriving year-round.</p>
+
+    <h3>Is there a minimum service charge?</h3>
+    <p>Pricing depends on project size and services requested. Contact us for a detailed quote.</p>
+  </section>
+
+  <section aria-labelledby="customer-stories" class="info-block">
+    <h2 id="customer-stories">Customer Stories</h2>
+    <p>
+      Many of our clients have experienced remarkable transformations of their outdoor spaces. Here are glimpses of their journeys:
+    </p>
+    <p>
+      <strong>“PetalVibes brought life back to our backyard. Their team listened carefully and created a cherry blossom-inspired haven that’s our favorite retreat.”</strong> – Amanda S.
+    </p>
+    <p>
+      <strong>“From consultation to planting to maintenance, PetalVibes was professional and passionate about my garden. Highly recommended!”</strong> – Robert H.
+    </p>
+    <p>
+      We cherish these relationships and your satisfaction is our priority.
+    </p>
+  </section>
+
+  <section aria-labelledby="community-involvement" class="info-block">
+    <h2 id="community-involvement">Community Involvement</h2>
+    <p>
+      PetalVibes Gardening is committed to supporting local community gardens and educational programs. We regularly volunteer and provide resources to promote urban green spaces and sustainable gardening.
+    </p>
+    <p>
+      Join us in fostering greener cities and connecting with neighbors through the love of plants and the environment.
+    </p>
+  </section>
+
+  <section aria-labelledby="final-note" class="info-block">
+    <h2 id="final-note">We’re Here to Help</h2>
+    <p>
+      Thank you for considering PetalVibes Gardening. Your garden is a canvas for nature’s beauty, and we look forward to helping you create a space that brings peace, joy, and inspiration.
+    </p>
+    <p>
+      Reach out anytime—we’re just a message or call away.
+    </p>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <address>
+    19 Washington Square N, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18662425454" aria-label="Call PetalVibes at +1 866 242 5454">+1 (866) 242-5454</a>
+  </address>
+  &copy; 2024 PetalVibes Gardening. All rights reserved.
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PetalVibes Gardening - Cookies Policy</title>
+<style>
+  /* CSS Variables for Dark Forest and Cherry Blossom */
+  :root {
+    --forest-dark: #142517;
+    --forest-medium: #234d20;
+    --forest-light: #3d7840;
+    --cherry-pink: #ffc4d6;
+    --cherry-pink-dark: #e892a9;
+    --text-light: #e9ecef;
+    --text-muted: #a4b494;
+    --background-dark: #0e1a0f;
+    --shadow-glass: rgba(255, 196, 214, 0.15);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0; padding:0;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-light);
+    background: var(--background-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 140px; /* space for dialog */
+  }
+  a {
+    color: var(--cherry-pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--cherry-pink-dark);
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 0.75rem;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+  }
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+  }
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--forest-light);
+  }
+  p, li {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    max-width: 900px;
+  }
+  ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  ul li {
+    margin-bottom: 0.8rem;
+  }
+  /* Container and layout */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--forest-dark);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(18,32,14,0.8);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+    letter-spacing: 0.1em;
+    cursor: default;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .nav-links > a {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  nav .nav-links > a:hover,
+  nav .nav-links > a:focus {
+    background: var(--cherry-pink);
+    color: var(--forest-dark);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, rgba(255,196,214,0.8), rgba(18,43,16,0.85)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-light);
+  }
+  .hero h1 {
+    font-size: 4rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.65);
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  /* Main content styles */
+  main.content {
+    background: var(--forest-dark);
+    padding: 3rem 1rem 6rem 1rem;
+    color: var(--text-muted);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.9;
+  }
+  main.content section {
+    margin-bottom: 3rem;
+  }
+  main.content h2 {
+    color: var(--cherry-pink);
+    margin-bottom: 1.2rem;
+  }
+  main.content h3 {
+    color: var(--forest-light);
+    margin-bottom: 0.8rem;
+  }
+
+  /* Disclaimer and Customer Satisfaction Section */
+  footer {
+    background: var(--forest-dark);
+    color: var(--text-muted);
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid var(--forest-medium);
+    position: relative;
+    z-index: 10;
+  }
+  footer address {
+    font-style: normal;
+    margin-bottom: 0.25rem;
+  }
+  footer a {
+    color: var(--cherry-pink);
+    font-weight: 600;
+  }
+
+  /* Cookie consent dialog */
+  #cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--forest-medium);
+    color: var(--text-light);
+    padding: 1.5rem 2rem;
+    width: min(100%, 600px);
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0 -4px 16px rgba(18,43,16,0.8);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1rem;
+    z-index: 10000;
+  }
+  #cookie-consent p {
+    flex: 1 1 300px;
+    margin: 0;
+  }
+  #cookie-consent button {
+    background: var(--cherry-pink);
+    color: var(--forest-dark);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.75rem 1.8rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  #cookie-consent button:hover,
+  #cookie-consent button:focus {
+    background: var(--cherry-pink-dark);
+    outline: none;
+  }
+  #cookie-consent button.decline {
+    background: transparent;
+    border: 2px solid var(--cherry-pink);
+    color: var(--cherry-pink);
+  }
+  #cookie-consent button.decline:hover,
+  #cookie-consent button.decline:focus {
+    background: var(--cherry-pink-dark);
+    border-color: var(--cherry-pink-dark);
+    color: var(--forest-dark);
+  }
+
+  @media (max-width: 580px) {
+    #cookie-consent {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    #cookie-consent p {
+      flex: unset;
+      margin-bottom: 1rem;
+    }
+    #cookie-consent button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Primary navigation">
+    <div class="logo" tabindex="0">PetalVibes</div>
+    <div class="nav-links">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Cookies Policy">
+  <h1>Cookies Policy</h1>
+  <p>This comprehensive Cookies Policy explains how PetalVibes Gardening uses cookies and similar technologies on our website to enhance your experience.</p>
+</section>
+
+<main class="content" tabindex="0" aria-label="Cookies Policy Content">
+
+  <section aria-labelledby="introduction">
+    <h2 id="introduction">Introduction</h2>
+    <p>
+      At PetalVibes Gardening, we respect your privacy and want you to understand how we use cookies and other tracking technologies to collect information. This Cookies Policy details what cookies are, how we use them, and how you can manage them.
+    </p>
+    <p>
+      By using our website, you agree to the use of cookies consistent with this policy. If you do not consent, you can decline cookies via the dialog below or adjust your browser settings.
+    </p>
+  </section>
+
+  <section aria-labelledby="what-are-cookies">
+    <h2 id="what-are-cookies">What Are Cookies?</h2>
+    <p>
+      Cookies are small text files placed on your device by websites you visit. They enable the website to recognize your device and store information such as preferences or session details.
+    </p>
+    <h3>Types of Cookies</h3>
+    <ul>
+      <li><strong>Session Cookies:</strong> Temporary cookies deleted when you close your browser.</li>
+      <li><strong>Persistent Cookies:</strong> Cookies stored on your device for a set period or until manually deleted.</li>
+      <li><strong>First-Party Cookies:</strong> Set by the website you're visiting directly.</li>
+      <li><strong>Third-Party Cookies:</strong> Set by domains other than the website you're visiting, typically for analytics or advertising.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="how-we-use-cookies">
+    <h2 id="how-we-use-cookies">How We Use Cookies</h2>
+    <p>
+      We use cookies to enhance your browsing experience, analyze site usage, and provide personalized content. Our uses include:
+    </p>
+    <ul>
+      <li>Remembering your cookie preferences and consent choices.</li>
+      <li>Maintaining your session so you don't need to log in repeatedly.</li>
+      <li>Analyzing user behavior to improve website performance and services.</li>
+      <li>Personalizing content and targeting relevant advertisements.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="types-of-cookies-used">
+    <h2 id="types-of-cookies-used">Types of Cookies Used by PetalVibes Gardening</h2>
+    <h3>Essential Cookies</h3>
+    <p>
+      These cookies are critical for the operation of our site, enabling functions like secure login, maintaining session state, and protecting against fraudulent activity.
+    </p>
+    <h3>Performance & Analytics Cookies</h3>
+    <p>
+      These cookies collect anonymized data about how visitors use our website to help us monitor and improve user experience and site functionality.
+    </p>
+    <h3>Functional Cookies</h3>
+    <p>
+      These cookies enable our site to remember preferences and choices you make, such as language settings or display options, thereby enhancing your visit.
+    </p>
+    <h3>Advertising Cookies</h3>
+    <p>
+      Cookies that collect information to deliver more relevant advertising content to you and limit the number of times you see a particular ad.
+    </p>
+  </section>
+
+  <section aria-labelledby="third-party-cookies">
+    <h2 id="third-party-cookies">Third-Party Cookies</h2>
+    <p>
+      Our website may use third-party services that deploy cookies, including analytics providers and advertising networks. These third parties have their privacy policies and management practices. Examples include Google Analytics and social media platforms.
+    </p>
+    <p>
+      We do not control these cookies and recommend reviewing third-party privacy policies to understand how they use your data.
+    </p>
+  </section>
+
+  <section aria-labelledby="managing-cookies">
+    <h2 id="managing-cookies">Managing and Controlling Cookies</h2>
+    <p>
+      You can control cookies via your browser settings to accept, reject, or delete cookies. How to do this depends on your browser:
+    </p>
+    <ul>
+      <li>Chrome: Settings > Privacy and Security > Cookies and other site data</li>
+      <li>Firefox: Options > Privacy & Security > Cookies and Site Data</li>
+      <li>Safari: Preferences > Privacy > Manage Website Data</li>
+      <li>Edge: Settings > Cookies and site permissions > Manage and delete cookies and site data</li>
+    </ul>
+    <p>
+      Note that disabling cookies may impact website functionality and degrade your user experience.
+    </p>
+  </section>
+
+  <section aria-labelledby="cookie-consent-dialog">
+    <h2 id="cookie-consent-dialog">Cookie Consent Dialog</h2>
+    <p>
+      On your first visit to our site, you will see a cookie consent dialog at the bottom of the page. You can choose to accept or decline cookies.
+    </p>
+    <p>
+      - Accepting cookies helps us offer a tailored and seamless browsing experience.<br/>
+      - Declining may restrict some site features but will prevent non-essential cookies from being stored.
+    </p>
+  </section>
+
+  <section aria-labelledby="how-long-do-cookies-last">
+    <h2 id="how-long-do-cookies-last">How Long Do Cookies Last?</h2>
+    <p>
+      The duration cookies remain on your device depends on the type:
+    </p>
+    <ul>
+      <li><strong>Session Cookies:</strong> Until the end of your browser session.</li>
+      <li><strong>Persistent Cookies:</strong> Can remain for months or years depending on their purpose.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="privacy-and-cookies">
+    <h2 id="privacy-and-cookies">Cookies and Personal Data</h2>
+    <p>
+      Cookies by themselves do not typically contain personally identifiable information unless you have provided it to us directly. However, they help us recognize your device and activity patterns.
+    </p>
+    <p>
+      Our Privacy Policy details how we collect and protect your personal data and is incorporated by reference into this Cookies Policy.
+    </p>
+  </section>
+
+  <section aria-labelledby="cookies-in-other-jurisdictions">
+    <h2 id="cookies-in-other-jurisdictions">Cookies in Other Jurisdictions</h2>
+    <p>
+      Different countries have different laws governing cookies and tracking technologies. PetalVibes Gardening complies with applicable regulations, including the EU ePrivacy Directive and the California Consumer Privacy Act (CCPA).
+    </p>
+  </section>
+
+  <section aria-labelledby="california-consumer-privacy-act">
+    <h2 id="california-consumer-privacy-act">California Consumer Privacy Act (CCPA)</h2>
+    <p>
+      California residents have additional rights under the CCPA regarding the collection and use of cookies and personal information. You may request details about the cookies we use and opt out of sale or sharing of your information.
+    </p>
+  </section>
+
+  <section aria-labelledby="general-data-protection-regulation">
+    <h2 id="general-data-protection-regulation">General Data Protection Regulation (GDPR)</h2>
+    <p>
+      Residents in the European Union enjoy rights under the GDPR, including choosing to reject cookies not strictly necessary for the functioning of the site. You can manage your cookie preferences and withdraw consent at any time.
+    </p>
+  </section>
+
+  <section aria-labelledby="updates-to-cookies-policy">
+    <h2 id="updates-to-cookies-policy">Updates to This Cookies Policy</h2>
+    <p>
+      We may revise this Cookies Policy periodically to reflect changes in our practices or legal requirements. Updated versions will be posted here with the date of last revision.
+    </p>
+    <p>
+      We encourage you to review this policy regularly for updates.
+    </p>
+  </section>
+
+  <section aria-labelledby="contact-info" id="contact">
+    <h2 id="contact-info">Contact Us</h2>
+    <p>If you have any questions or concerns about our Cookies Policy, please contact:</p>
+    <p>Email: <a href="mailto:cookies@petalvibes.com">cookies@petalvibes.com</a></p>
+    <p>Phone: <a href="tel:+12125551234">+1 (212) 555-1234</a></p>
+  </section>
+
+  <section aria-label="Extended Cookies Content">
+
+  <h2>Additional Details on Our Cookie Practices</h2>
+
+  <p>
+  PetalVibes Gardening strives to be transparent and respectful regarding your privacy. The following sections provide in-depth information about cookies and related technologies to help you understand our practices in detail.
+  </p>
+
+  <h3>Technologies Similar to Cookies</h3>
+  <p>
+  In addition to traditional cookies, we may use:
+  </p>
+  <ul>
+    <li><strong>Local Storage:</strong> A browser feature that stores larger amounts of data for persistent use.</li>
+    <li><strong>Pixel Tags/Web Beacons:</strong> Small transparent images embedded in web pages or emails to monitor user interactions.</li>
+    <li><strong>Fingerprinting Technologies:</strong> Techniques to uniquely identify devices based on software and hardware characteristics.</li>
+  </ul>
+  <p>
+  These technologies help us operate the Site and deliver enhanced user experience.
+  </p>
+
+  <h3>Essential Cookies Explained</h3>
+  <p>
+  These cookies enable core functionalities such as:
+  </p>
+  <ul>
+    <li>Secure login authentication</li>
+    <li>Protection against fraud and cyber-attacks</li>
+    <li>Shopping cart or service booking session maintenance</li>
+  </ul>
+
+  <h3>Third-Party Analytics Cookies</h3>
+  <p>
+  We use third-party analytics providers to collect aggregated and anonymized data about user interactions. These insights help optimize our website for performance and usability.
+  </p>
+  <p>
+  Common providers include Google Analytics. You can opt out of Google Analytics via browser plugins or preference settings.
+  </p>
+
+  <h3>Advertising and Remarketing Cookies</h3>
+  <p>
+  We collaborate with advertising partners to deliver relevant promotions tailored to your interests based on your browsing behavior.
+  </p>
+  <p>
+  These cookies may collect information across different websites and do not include personal identifiers unless you provide them explicitly.
+  </p>
+
+  <h3>Cookie Expiry</h3>
+  <p>
+  Cookies have varied lifespans. Some expire when you close your browser; others remain for months or years to track visitor preferences over time.
+  </p>
+
+  <h3>How to Disable Cookies</h3>
+  <p>
+  Disabling cookies may impact your experience. Some features may not work correctly or require frequent re-login.
+  </p>
+  <p>
+  Popular browsers offer cookie management tools:
+  </p>
+  <ul>
+    <li><strong>Google Chrome:</strong> Privacy > Cookies and other site data > See all cookies and site data.</li>
+    <li><strong>Mozilla Firefox:</strong> Privacy & Security > Cookies and Site Data > Manage Permissions.</li>
+    <li><strong>Safari:</strong> Preferences > Privacy > Manage Website Data.</li>
+    <li><strong>Microsoft Edge:</strong> Cookies and site permissions > Manage and delete cookies and site data.</li>
+  </ul>
+
+  <h3>Your Choices Regarding Cookies</h3>
+  <p>
+  You may accept all cookies, reject non-essential cookies, or configure your preferences individually via the cookie consent dialog or browser.
+  </p>
+  <p>
+  Your choices are respected and reflected in our cookie storage practices.
+  </p>
+
+  <h3>Children and Cookies</h3>
+  <p>
+  We do not target our website or cookies to children under 13 years of age. Parents or guardians should supervise children’s internet usage.
+  </p>
+
+  <h3>Enforcement and Compliance</h3>
+  <p>
+  PetalVibes Gardening complies with applicable laws and regulations about cookies including GDPR, CCPA, and ePrivacy Directive.
+  </p>
+
+  <h3>Cookie Policy Changes Notification</h3>
+  <p>
+  We may notify you of significant changes to this policy via prominent notices or emails where applicable.
+  </p>
+
+  <h3>More Information</h3>
+  <p>
+  For further details, visit official regulatory websites or contact PetalVibes Gardening directly.
+  </p>
+
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <address>
+    19 Washington Square N, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18662425454" aria-label="Call PetalVibes at +1 866 242 5454">+1 (866) 242-5454</a>
+  </address>
+  &copy; 2024 PetalVibes Gardening. All rights reserved.
+</footer>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent dialog">
+  <p>Our website uses cookies to enhance your experience. By clicking Accept, you consent to our use of cookies. You may decline if you prefer.</p>
+  <button id="accept-cookies" type="button">Accept</button>
+  <button id="decline-cookies" class="decline" type="button">Decline</button>
+</div>
+
+<script>
+  const consentDialog = document.getElementById('cookie-consent');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const declineBtn = document.getElementById('decline-cookies');
+
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/; SameSite=Lax";
+  }
+
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i=0;i < ca.length;i++) {
+      let c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  function hideConsentDialog() {
+    consentDialog.style.display = 'none';
+  }
+
+  // Check if user already made a choice
+  window.addEventListener('load', () => {
+    const cookieConsent = getCookie('petalvibes_cookie_consent');
+    if (cookieConsent === "accepted" || cookieConsent === "declined") {
+      hideConsentDialog();
+    }
+  });
+
+  acceptBtn.addEventListener('click', () => {
+    setCookie('petalvibes_cookie_consent', 'accepted', 365);
+    hideConsentDialog();
+    // Here you could initialize scripts depending on cookie consent
+  });
+
+  declineBtn.addEventListener('click', () => {
+    setCookie('petalvibes_cookie_consent', 'declined', 365);
+    hideConsentDialog();
+    // Here you might disable tracking scripts or features
+  });
+</script>
+
+</body>
+</html>
+

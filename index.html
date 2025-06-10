@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PetalVibes Gardening Services</title>
+<style>
+  /* CSS Variables for Dark Forest and Cherry Blossom */
+  :root {
+    --forest-dark: #142517;
+    --forest-medium: #234d20;
+    --forest-light: #3d7840;
+    --cherry-pink: #ffc4d6;
+    --cherry-pink-dark: #e892a9;
+    --text-light: #e9ecef;
+    --text-muted: #a4b494;
+    --background-dark: #0e1a0f;
+    --shadow-glass: rgba(255, 196, 214, 0.15);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0; padding:0;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-light);
+    background: var(--background-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--cherry-pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--cherry-pink-dark);
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 0.75rem;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+  }
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+  }
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--forest-light);
+  }
+  p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    max-width: 700px;
+  }
+
+  /* Container and layout */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--forest-dark);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(18,32,14,0.8);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+    letter-spacing: 0.1em;
+    cursor: default;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .nav-links > a {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  nav .nav-links > a:hover,
+  nav .nav-links > a:focus {
+    background: var(--cherry-pink);
+    color: var(--forest-dark);
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255,196,214,0.8), rgba(18,43,16,0.85)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--text-light);
+  }
+  .hero h1 {
+    font-size: 4rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  .btn-primary {
+    background: var(--cherry-pink);
+    color: var(--forest-dark);
+    font-weight: 700;
+    padding: 0.85rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 4px 12px rgba(255,196,214,0.6);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    user-select: none;
+  }
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background: var(--cherry-pink-dark);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  /* Services Section */
+  section.services {
+    background: var(--forest-medium);
+    padding: 4rem 1rem 5rem 1rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    box-shadow: inset 0 0 40px rgba(18,43,16,0.9);
+  }
+  section.services h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--cherry-pink);
+  }
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2.25rem;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .card {
+    background: rgba(50,75,35,0.9);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 16px var(--shadow-glass);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    backdrop-filter: saturate(180%) blur(12px);
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(255,196,214,0.35);
+  }
+  .card h3 {
+    color: var(--cherry-pink);
+    margin-bottom: 1rem;
+  }
+  .card p {
+    flex-grow: 1;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+  .price {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--cherry-pink);
+    text-align: right;
+  }
+
+  /* Main Content Section */
+  main.content {
+    background: var(--forest-dark);
+    padding: 3rem 1rem 6rem 1rem;
+    color: var(--text-muted);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  main.content section {
+    margin-bottom: 3rem;
+  }
+  main.content h2 {
+    color: var(--cherry-pink);
+    margin-bottom: 1rem;
+  }
+  main.content p {
+    font-size: 1.1rem;
+    max-width: none;
+  }
+
+  /* Images with float and text wrap */
+  .img-left {
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+    width: 320px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(18,43,16,0.7);
+  }
+  .img-right {
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+    width: 320px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(18,43,16,0.7);
+  }
+  @media (max-width: 850px){
+    .img-left, .img-right {
+      float: none;
+      margin: 0 auto 1.5rem auto;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  /* Disclaimer and Customer Satisfaction Section */
+  .bottom-info {
+    background: var(--forest-medium);
+    padding: 3rem 1rem;
+    color: var(--text-muted);
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px var(--shadow-glass);
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+  .bottom-info h3 {
+    color: var(--cherry-pink);
+    margin-bottom: 1rem;
+  }
+  .bottom-info p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--forest-dark);
+    color: var(--text-muted);
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid var(--forest-medium);
+  }
+  footer address {
+    font-style: normal;
+    margin-bottom: 0.25rem;
+  }
+  footer a {
+    color: var(--cherry-pink);
+    font-weight: 600;
+  }
+
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Primary navigation">
+    <div class="logo" tabindex="0">PetalVibes</div>
+    <div class="nav-links">
+      <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Welcome to PetalVibes gardening service">
+  <h1>Grow Your Dreams with PetalVibes Gardening</h1>
+  <p>Experience the enchanting blend of nature and art with our bespoke gardening services inspired by the rich allure of dark forests and the delicate beauty of cherry blossoms.</p>
+  <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" aria-label="Explore our services">Explore Our Services</button>
+</section>
+
+<section id="services" class="services" aria-labelledby="services-title">
+  <h2 id="services-title">Our Premium Gardening Services & Pricing</h2>
+  <div class="service-cards">
+    <article class="card" role="article" aria-label="Lawn Care Service">
+      <h3>Lawn Care & Maintenance</h3>
+      <p>Comprehensive lawn mowing, trimming, fertilization, and pest control to keep your lawn lush, green, and healthy all year round — tailored to your garden's unique ecosystem.</p>
+      <div class="price" aria-label="Price: Starting at $80 per visit">$80 / visit</div>
+    </article>
+    <article class="card" role="article" aria-label="Flower Bed Design and Planting">
+      <h3>Flower Bed Design & Planting</h3>
+      <p>Creative design and planting with a focus on cherry blossom inspired color palettes, seasonal blooms, and sustainable practices to add color and charm to your property.</p>
+      <div class="price" aria-label="Price: Starting at $150 per bed">$150 / per bed</div>
+    </article>
+    <article class="card" role="article" aria-label="Tree and Shrub Care">
+      <h3>Tree & Shrub Care</h3>
+      <p>Expert pruning, fertilizing, and disease management for your trees and shrubs, ensuring they thrive in your garden’s dark forest-inspired environment.</p>
+      <div class="price" aria-label="Price: Starting at $120 per treatment">$120 / treatment</div>
+    </article>
+    <article class="card" role="article" aria-label="Garden Design Consultation">
+      <h3>Garden Design Consultation</h3>
+      <p>Personalized consultation services helping you bring your vision to life — whether designing a peaceful forest retreat, a cherry blossom paradise, or a vibrant flower garden.</p>
+      <div class="price" aria-label="Price: $100 per hour">$100 / hour</div>
+    </article>
+  </div>
+</section>
+
+<main class="content" id="about" tabindex="0" aria-label="About PetalVibes Gardening and services information">
+
+  <section aria-labelledby="welcome-message">
+    <h2 id="welcome-message">Welcome to PetalVibes Gardening</h2>
+    <img src="s1.png" alt="Beautiful cherry blossom garden" class="img-left" loading="lazy" />
+    <p>
+      Nestled in the heart of New York City, PetalVibes Gardening services specialize in creating lush, vibrant outdoor spaces that reflect the beauty and tranquility of nature. Our approach is inspired by the enchanting serenity of dark forest vibes combined with the delicate charm of cherry blossoms — a harmonious blend that brings your garden alive with colors, textures, and life.
+    </p>
+    <p>
+      Our expert team of horticulturists, landscape designers, and gardeners bring decades of experience and creativity to each project. We believe that gardening is an art form — an intimate dance between soil, plants, and care. Whether you want a small sanctuary on your balcony or a sprawling garden retreat, PetalVibes transforms your outdoor spaces into a floral symphony.
+    </p>
+    <p>
+      We invite you to discover the magic of gardens designed to inspire mindfulness, promote biodiversity, and foster connection with nature. Our comprehensive services range from lawn care to bespoke garden designs that celebrate seasonal beauty and ecological sustainability.
+    </p>
+  </section>
+
+  <section aria-labelledby="services-detail">
+    <h2 id="services-detail">Our Expertise in Garden Care</h2>
+    <img src="s2.jpg" alt="Gardener pruning plants with care" class="img-right" loading="lazy" />
+    <p>
+      At PetalVibes, we pride ourselves on our personalized approach to garden care. Every garden is unique, and our services are tailored accordingly. We start by understanding your needs, soil conditions, light availability, and the local ecosystem. Our tailored lawn care includes organic fertilization, drought-resistant planting, and integrated pest management, ensuring your garden remains healthy and vibrant.
+    </p>
+    <p>
+      Our flower bed design service celebrates seasonal blossoms. Inspired by cherry blossom hues of soft pinks and whites, we integrate native and exotic plants to create stunning beds that evolve with the seasons. We consider flower blooming cycles, pollinator attraction, and soil health in every design.
+    </p>
+    <p>
+      Tree and shrub care is conducted with precision and respect. We handle pruning, shaping, disease control, and soil enrichment, maintaining your woody plants in prime condition. From majestic oaks to delicate flowering cherry trees, we ensure every plant flourishes in its environment.
+    </p>
+  </section>
+
+  <section aria-labelledby="gardening-benefits">
+    <h2 id="gardening-benefits">The Benefits of a Well-Maintained Garden</h2>
+    <p>
+      Gardening is more than beautification — it has profound health, environmental, and emotional benefits. Well-cared gardens improve air quality by filtering pollutants and releasing oxygen, helping combat urban pollution challenges.
+    </p>
+    <p>
+      Gardens act as natural sound barriers, reducing noise pollution and providing peaceful retreats from city noise. Our dark forest-themed gardens with thick foliage add an immersive sense of calm and privacy.
+    </p>
+    <p>
+      Beyond environmental impact, gardening promotes mental well-being by encouraging mindfulness, reducing stress, and fostering creativity. Cherry blossom gardens, in particular, celebrate renewal and beauty, inspiring reflection and happiness.
+    </p>
+    <p>
+      Economically, investing in quality gardening services enhances property value and curb appeal. A healthy garden attracts pollinators and birds, supporting local biodiversity and ecological balance, essential in today’s changing climate.
+    </p>
+  </section>
+
+  <section aria-labelledby="customer-testimonials">
+    <h2 id="customer-testimonials">Customer Satisfaction & Testimonials</h2>
+    <p>
+      Our customers consistently praise PetalVibes for our attention to detail, professionalism, and passion for plants. Here are a few words from satisfied clients:
+    </p>
+    <blockquote style="color: var(--cherry-pink-dark); border-left: 4px solid var(--cherry-pink); padding-left: 1rem; margin: 1rem 0;">
+      "PetalVibes transformed my dull backyard into a cherry blossom paradise. The care and creativity they brought was exceptional – my family and I enjoy it every day." &mdash; Lisa K.
+    </blockquote>
+    <blockquote style="color: var(--cherry-pink-dark); border-left: 4px solid var(--cherry-pink); padding-left: 1rem; margin: 1rem 0;">
+      "Professional, punctual, and passionate. Their dark forest garden concept created a calming retreat that feels like an escape in the heart of NYC." &mdash; Michael R.
+    </blockquote>
+    <p>
+      We guarantee customer satisfaction with every project, ensuring ongoing support and maintenance plans tailored to your gardening needs.
+    </p>
+  </section>
+
+  <section aria-labelledby="gardening-tips">
+    <h2 id="gardening-tips">Tips for Maintaining Your Garden</h2>
+    <p>
+      Keeping your garden thriving requires knowledge and routine care. Here are some essential tips from our experts:
+    </p>
+    <ul style="max-width:600px; font-size: 1rem; color: var(--text-light);">
+      <li>Water your plants deeply but infrequently to encourage strong root growth.</li>
+      <li>Use mulch to retain soil moisture and suppress weeds, while adding organic matter.</li>
+      <li>Prune trees and shrubs during dormancy to promote healthy growth and flowering.</li>
+      <li>Choose native and drought-resistant plants to reduce water usage and maintenance.</li>
+      <li>Regularly monitor for pests and diseases, adopting eco-friendly control methods.</li>
+      <li>Rotate plantings seasonally to enrich soil and prevent pests.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="eco-friendly-gardening">
+    <h2 id="eco-friendly-gardening">Commitment to Eco-Friendly Gardening</h2>
+    <p>
+      At PetalVibes, we value sustainability and the environment. Our practices minimize chemical use, promote soil health, and encourage biodiversity. We use organic fertilizers and pesticides where needed, and work to conserve water through smart irrigation.
+    </p>
+    <p>
+      We also design gardens that attract pollinators, birds, and beneficial insects, contributing to ecosystem health. Our dark forest and cherry blossom inspired gardens celebrate natural cycles and seasonal beauty while protecting the environment.
+    </p>
+  </section>
+
+  <section aria-labelledby="contact-info" id="contact">
+    <h2 id="contact-info">Contact Us</h2>
+    <p>Ready to transform your outdoor space into a breathtaking paradise? Get in touch with PetalVibes today for personalized gardening services that infuse your world with the beauty of nature.</p>
+    <p>Email: <a href="mailto:info@petalvibes.com">info@petalvibes.com</a></p>
+    <p>Phone: <a href="tel:+18662425454">+1 (866) 242-5454</a></p>
+  </section>
+
+</main>
+
+<section class="bottom-info" aria-label="Disclaimer and Customer Satisfaction Guarantee">
+  <h3>Disclaimer</h3>
+  <p>
+    While PetalVibes Gardening strives to provide exceptional services and products, garden results may vary depending on environmental factors beyond our control, including weather, soil conditions, and local wildlife. We recommend regular maintenance and following expert advice for optimum results.
+  </p>
+  <p>
+    All information provided on this website is for general gardening guidance and inspiration purposes only. PetalVibes Gardening is not responsible for any damages or losses resulting from the application of these gardening tips or services.
+  </p>
+
+  <h3>Customer Satisfaction Guarantee</h3>
+  <p>
+    We pride ourselves on delivering quality and satisfaction. If you experience any issues with our services, please contact us within 14 days so we can address your concerns promptly. Your garden’s health and your happiness are our utmost priorities.
+  </p>
+</section>
+
+<footer role="contentinfo">
+  <address>
+    19 Washington Square N, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18662425454" aria-label="Call PetalVibes at +1 866 242 5454">+1 (866) 242-5454</a>
+  </address>
+  &copy; 2024 PetalVibes Gardening. All rights reserved.
+</footer>
+
+</body>
+</html>
+

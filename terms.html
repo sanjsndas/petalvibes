@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PetalVibes Gardening - Terms and Conditions</title>
+<style>
+  /* CSS Variables for Dark Forest and Cherry Blossom */
+  :root {
+    --forest-dark: #142517;
+    --forest-medium: #234d20;
+    --forest-light: #3d7840;
+    --cherry-pink: #ffc4d6;
+    --cherry-pink-dark: #e892a9;
+    --text-light: #e9ecef;
+    --text-muted: #a4b494;
+    --background-dark: #0e1a0f;
+    --shadow-glass: rgba(255, 196, 214, 0.15);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0; padding:0;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-light);
+    background: var(--background-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--cherry-pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--cherry-pink-dark);
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 0.75rem;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+  }
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+  }
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--forest-light);
+  }
+  p, li {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    max-width: 900px;
+  }
+  ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  ul li {
+    margin-bottom: 0.8rem;
+  }
+  /* Container and layout */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--forest-dark);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(18,32,14,0.8);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--cherry-pink);
+    letter-spacing: 0.1em;
+    cursor: default;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .nav-links > a {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  nav .nav-links > a:hover,
+  nav .nav-links > a:focus {
+    background: var(--cherry-pink);
+    color: var(--forest-dark);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, rgba(255,196,214,0.8), rgba(18,43,16,0.85)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-light);
+  }
+  .hero h1 {
+    font-size: 4rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.65);
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  /* Main content styles */
+  main.content {
+    background: var(--forest-dark);
+    padding: 3rem 1rem 6rem 1rem;
+    color: var(--text-muted);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.9;
+  }
+  main.content section {
+    margin-bottom: 3rem;
+  }
+  main.content h2 {
+    color: var(--cherry-pink);
+    margin-bottom: 1.2rem;
+  }
+  main.content h3 {
+    color: var(--forest-light);
+    margin-bottom: 0.8rem;
+  }
+
+  /* Disclaimer and Customer Satisfaction Section */
+  footer {
+    background: var(--forest-dark);
+    color: var(--text-muted);
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid var(--forest-medium);
+  }
+  footer address {
+    font-style: normal;
+    margin-bottom: 0.25rem;
+  }
+  footer a {
+    color: var(--cherry-pink);
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Primary navigation">
+    <div class="logo" tabindex="0">PetalVibes</div>
+    <div class="nav-links">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Terms and Conditions">
+  <h1>Terms and Conditions</h1>
+  <p>Welcome to the PetalVibes Gardening website. Please read these Terms and Conditions carefully before using our services and website.</p>
+</section>
+
+<main class="content" tabindex="0" aria-label="Terms and Conditions Content">
+
+  <section aria-labelledby="introduction">
+    <h2 id="introduction">Introduction</h2>
+    <p>These Terms and Conditions govern your use of the PetalVibes Gardening website (the “Site”) and services (the “Services”). By accessing or using our Site or Services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Site or Services.</p>
+    <p>We reserve the right to update or modify these Terms at any time without prior notice. The most current version of the Terms will be posted on this page, and your continued use of the Site constitutes your acceptance of the updated Terms.</p>
+  </section>
+
+  <section aria-labelledby="use-of-site">
+    <h2 id="use-of-site">Use of Our Site and Services</h2>
+    <p>PetalVibes Gardening provides various gardening design and maintenance services to clients. The Site is designed to provide information about our offerings, allow you to contact us, and facilitate service engagements.</p>
+    <p>By using the Site, you represent that you are at least 18 years of age or have legal consent to use our Services.</p>
+    <h3>Prohibited Uses</h3>
+    <p>You agree not to use the Site or Services for any unlawful purposes or to:</p>
+    <ul>
+      <li>Violate any applicable laws or regulations.</li>
+      <li>Infringe upon our intellectual property rights or those of others.</li>
+      <li>Transmit anything profane, obscene, or offensive.</li>
+      <li>Attempt to disrupt, damage, or interfere with the Site or its functionality.</li>
+      <li>Attempt to gain unauthorized access to any part of the Site or Services.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="intellectual-property">
+    <h2 id="intellectual-property">Intellectual Property Rights</h2>
+    <p>All content on this Site, including text, graphics, logos, images, and software, is the property of PetalVibes Gardening or its content suppliers and is protected by applicable intellectual property laws.</p>
+    <p>You may not reproduce, distribute, modify, publicly display, or create derivative works from any content on this Site without prior written permission from PetalVibes Gardening.</p>
+  </section>
+
+  <section aria-labelledby="user-generated-content">
+    <h2 id="user-generated-content">User-Generated Content</h2>
+    <p>If you submit content, comments, feedback, or other materials to us through the Site, you grant PetalVibes Gardening a worldwide, royalty-free, non-exclusive license to use, reproduce, modify, and distribute that content for any purpose related to our business.</p>
+    <p>You represent and warrant that you have all necessary rights to submit such content and that it does not infringe any third-party rights.</p>
+  </section>
+
+  <section aria-labelledby="service-agreements">
+    <h2 id="service-agreements">Service Agreements</h2>
+    <p>Any services ordered through PetalVibes Gardening are subject to separate service agreements describing the scope, pricing, timelines, and terms of delivery.</p>
+    <p>We reserve the right to refuse or cancel service orders at our discretion. Any disputes related to service contracts will be governed by the terms outlined in those contracts.</p>
+    <p>Clients are responsible for providing accurate information and access required for the performance of services.</p>
+  </section>
+
+  <section aria-labelledby="payment-terms">
+    <h2 id="payment-terms">Payment Terms</h2>
+    <p>All payments for services are due as specified in the service agreements.</p>
+    <p>We accept payments via methods listed on our Site. Late payments may incur additional fees or suspension of services.</p>
+    <p>Refunds are granted only according to the terms specified in individual service agreements unless otherwise agreed upon in writing.</p>
+  </section>
+
+  <section aria-labelledby="limitation-of-liability">
+    <h2 id="limitation-of-liability">Limitation of Liability</h2>
+    <p>PetalVibes Gardening shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of the Site or Services.</p>
+    <p>This includes but is not limited to damages for loss of profits, goodwill, data, or other intangible losses, even if we have been advised of the possibility of such damages.</p>
+  </section>
+
+  <section aria-labelledby="disclaimer-of-warranties">
+    <h2 id="disclaimer-of-warranties">Disclaimer of Warranties</h2>
+    <p>The Site and Services are provided “as is” and “as available” without any warranties of any kind, either express or implied.</p>
+    <p>PetalVibes Gardening expressly disclaims all warranties, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.</p>
+  </section>
+
+  <section aria-labelledby="indemnification">
+    <h2 id="indemnification">Indemnification</h2>
+    <p>You agree to indemnify, defend, and hold harmless PetalVibes Gardening and its affiliates from and against any claims, liabilities, damages, losses, and expenses arising out of your violation of these Terms or your use of the Site or Services.</p>
+  </section>
+
+  <section aria-labelledby="governing-law">
+    <h2 id="governing-law">Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of laws rules.</p>
+    <p>Any legal actions or proceedings arising from these Terms shall be brought exclusively in the courts located within New York City.</p>
+  </section>
+
+  <section aria-labelledby="dispute-resolution">
+    <h2 id="dispute-resolution">Dispute Resolution</h2>
+    <p>Any disputes arising out of or related to the Site or Services should first be attempted to be resolved informally by contacting PetalVibes Gardening.</p>
+    <p>If not resolved informally, disputes may be resolved through binding arbitration according to the rules of the American Arbitration Association, held in New York City.</p>
+  </section>
+
+  <section aria-labelledby="termination">
+    <h2 id="termination">Termination</h2>
+    <p>We reserve the right to terminate or restrict your access to the Site or Services at our discretion, without prior notice or liability, for any reason including suspected violation of these Terms.</p>
+    <p>Provisions which by their nature should survive termination shall remain in effect, including but not limited to intellectual property and limitation of liability clauses.</p>
+  </section>
+
+  <section aria-labelledby="third-party-links">
+    <h2 id="third-party-links">Third-Party Links</h2>
+    <p>Our Site may contain links to third-party websites or services that are not owned or controlled by PetalVibes Gardening.</p>
+    <p>We do not endorse or assume responsibility for any such third-party content, privacy policies, or practices.</p>
+  </section>
+
+  <section aria-labelledby="changes-to-terms">
+    <h2 id="changes-to-terms">Changes to Terms</h2>
+    <p>We may update these Terms from time to time. Revised Terms will be posted on this page with an updated effective date.</p>
+    <p>Your continued use of the Site or Services after changes signifies your acceptance of the new Terms.</p>
+  </section>
+
+  <section aria-labelledby="entire-agreement">
+    <h2 id="entire-agreement">Entire Agreement</h2>
+    <p>These Terms, together with any applicable service agreements, constitute the entire agreement between you and PetalVibes Gardening relating to the Site and Services and supersede all prior agreements.</p>
+  </section>
+
+  <section aria-labelledby="contact-info" id="contact">
+    <h2 id="contact-info">Contact Information</h2>
+    <p>If you have any questions about these Terms, please contact us:</p>
+    <p>Email: <a href="mailto:terms@petalvibes.com">terms@petalvibes.com</a></p>
+    <p>Phone: <a href="tel:+12125551234">+1 (212) 555-1234</a></p>
+    <address>
+      PetalVibes Gardening<br/>
+      19 Washington Square N, New York, NY 10011, USA
+    </address>
+  </section>
+
+  <section aria-label="Additional Information">
+
+  <h2>Extended Terms Details</h2>
+
+  <p>
+  PetalVibes Gardening strives to maintain transparent and fair terms with our clients. Below are additional clarifications and elaborations designed to fully inform you about the rules of engagement when using our website and services.
+  </p>
+
+  <h3>User Account Responsibilities</h3>
+  <p>
+  Where you create an account related to our Services, you are responsible for maintaining the confidentiality of your account credentials and activity. You agree to notify us immediately of any unauthorized use or security breaches.
+  </p>
+
+  <h3>Disclaimer on Garden Results</h3>
+  <p>
+  Due to the natural variability in gardening processes beyond our control, PetalVibes Gardening makes no guarantees about specific outcomes, health, or growth rates of plants and gardens after service completion, except as explicitly stated in service contracts.
+  </p>
+
+  <h3>Force Majeure</h3>
+  <p>
+  PetalVibes Gardening shall not be liable for delays or failure to perform due to causes beyond reasonable control, such as natural disasters, acts of government, labor disputes, or other force majeure events.
+  </p>
+
+  <h3>Intellectual Property Enforcement</h3>
+  <p>
+  We actively enforce our intellectual property rights. Unauthorized use of our materials may lead to legal action.
+  </p>
+
+  <h3>Severability</h3>
+  <p>
+  If any provision of these Terms is found to be invalid or unenforceable by a court, the remaining provisions shall remain effective.
+  </p>
+
+  <h3>Waiver</h3>
+  <p>
+  Our failure to enforce any right or provision in these Terms shall not constitute a waiver of such rights.
+  </p>
+
+  <h3>Feedback and Suggestions</h3>
+  <p>
+  If you provide feedback or suggestions, you grant PetalVibes Gardening a non-exclusive, worldwide, royalty-free license to use the ideas without obligation.
+  </p>
+
+  <h3>Marketing Consent</h3>
+  <p>
+  By using our Services, you consent to receive marketing communications, which you may opt out of at any time.
+  </p>
+
+  <h3>Interactive Features</h3>
+  <p>
+  Certain interactive features may be provided on the Site. You agree to use such features in compliance with all applicable laws.
+  </p>
+
+  <h3>Privacy Policy Incorporation</h3>
+  <p>
+  Our Privacy Policy forms part of these Terms and governs how we collect and use your personal information.
+  </p>
+
+  <h3>Consent to Electronic Communications</h3>
+  <p>
+  By using our Site, you consent to receive electronic communications such as emails and notifications in connection with your use of the Site and Services.
+  </p>
+
+  <h3>Export Restrictions</h3>
+  <p>
+  You agree not to use or export the Site or Services in violation of export laws or regulations.
+  </p>
+
+  <h3>Contact Information</h3>
+  <p>
+  For any questions, please contact us at <a href="mailto:terms@petalvibes.com">terms@petalvibes.com</a> or call +1 (866) 242-5454.
+  </p>
+
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <address>
+    19 Washington Square N, New York, NY 10011, USA<br/>
+    Phone: <a href="tel:+18662425454" aria-label="Call PetalVibes at +1 866 242 5454">+1 (866) 242-5454</a>
+  </address>
+  &copy; 2024 PetalVibes Gardening. All rights reserved.
+</footer>
+
+</body>
+</html>
